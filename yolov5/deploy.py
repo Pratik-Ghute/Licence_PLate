@@ -1,10 +1,3 @@
-'''
-CODER ZERO
-connect with me at: https://www.youtube.com/channel/UCKipQAvBc7CWZaPib4y8Ajg
-How to train custom yolov5: https://youtu.be/12UoOlsRwh8
-DATASET: 1) https://www.kaggle.com/datasets/deepakat002/indian-vehicle-number-plate-yolo-annotation
-         2) https://www.kaggle.com/datasets/elysian01/car-number-plate-detection
-'''
 ### importing required libraries
 import torch
 import cv2
@@ -132,7 +125,7 @@ def main(img_path=None, vid_path=None,vid_out = None):
     print(f"[INFO] Loading model... ")
     ## loading the custom trained model
     # model =  torch.hub.load('ultralytics/yolov5', 'custom', path='last.pt',force_reload=True) ## if you want to download the git repo and then run the detection
-    model =  torch.hub.load('D:/dypiu/car_number_plate/yolov5', 'custom', path="D:/dypiu/car_number_plate/yolov5/best.pt", source ='local') ### The repo is stored locally
+    model =  torch.hub.load('yolov5', 'custom', path="yolov5/best.pt", source ='local') ### The repo is stored locally
 
     classes = model.names ### class names in string format
 
@@ -224,7 +217,7 @@ def main(img_path=None, vid_path=None,vid_out = None):
 
 
 # main(vid_path="./test_images/vid_1.mp4",vid_out="vid_1.mp4") ### for custom video
-main(vid_path=0,vid_out="webcam_facemask_result.mp4") #### for webcam
+# main(vid_path=0,vid_out="webcam_facemask_result.mp4") #### for webcam
 
-# main(img_path="D:/dypiu/car_number_plate/old/numberplaterecognition-main/numberplaterecognition-main/test_images/bus.jpg") ## for image
+main(img_path="yolov5/runs/train/test_img.jpg") ## for image
 
