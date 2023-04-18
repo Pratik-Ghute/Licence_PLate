@@ -219,5 +219,5 @@ def main(img_path=None, vid_path=None,vid_out = None):
 # main(vid_path="./test_images/vid_1.mp4",vid_out="vid_1.mp4") ### for custom video
 # main(vid_path=0,vid_out="webcam_facemask_result.mp4") #### for webcam
 
-main(img_path="yolov5/runs/train/test_img.jpg") ## for image
+main(img_path="data/images/IMG_20200222_183818.jpg") ## for image
 
